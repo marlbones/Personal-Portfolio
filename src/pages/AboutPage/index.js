@@ -32,7 +32,7 @@ const AboutPage = ({ classes }) => (
             </a>
           </div>
         </div>
-        <p className={classes.sub}>Thanks you for stopping by!</p>
+        <p className={classes.sub}>Thanks for stopping by!</p>
         <p className={classes.sub}>Marlon.</p>
       </div>
     </div>
