@@ -10,7 +10,7 @@ const AboutPage = ({ classes }) => (
     <div className={classes.container}>
       <div className={classes.info}>
         <h1 className={classes.heading}>About Me</h1>
-        <p className={classes.sub}>Hi there. My name's Marlon and I'm an Austraian born freelance web developer. I'm currently based in Ghana, but accept work from anywhere in the world. I hate the term "digital nomad", but I suppose that's what I am right now. Please don't judge me.</p>
+        <p className={classes.sub}>Hi there. My name's Marlon and I'm an Australian born freelance web developer. I'm currently based in Ghana, but accept work from anywhere in the world. I hate the term "digital nomad", but I suppose that's what I am right now. Please don't judge me.</p>
         <p className={classes.sub}>This is my stack of choice</p>
         <div className={classes.icons}>
           <i className="icon-html5" style={{paddingRight: 12}}></i>
