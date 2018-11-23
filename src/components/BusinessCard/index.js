@@ -11,7 +11,9 @@ const BusinessCard = ({ classes }) => (
       <Link className={classes.link} to={'/about'}>
         <h1 className={classes.heading}>Marlon Dimaano</h1>
       </Link>
-      <p className={classes.sub}>Web Developer</p>
+       <Link className={classes.link} to={'/projects'}>
+        <p className={classes.sub}>Web Developer</p>
+      </Link>
     </div>
     <div className={classes.bottomSection}>
       <div className={classes.contact}>
@@ -74,7 +76,6 @@ const styles = {
   sub: {
     fontSize: 16,
     margin: 0,
-    color: '#333',
     fontFamily: "'Open Sans', sans-serif",
   },
   bottomSection: {
