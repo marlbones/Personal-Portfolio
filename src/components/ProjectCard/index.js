@@ -2,6 +2,8 @@ import React from 'react';
 import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 
+import { BLACK, GRAY } from '../../style/constants';
+
 const ProjectCard = ({ classes, imageSrc, imageAlt, projectTitle, projectType, projectDescription, link }) => (
   <a className={classes.wrapper} href={link}>
       <div className={classes.imageWrapper}>
@@ -53,7 +55,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     fontSize: 16,
-    color: '#333',
+    color: BLACK,
     fontFamily: "'Open Sans', sans-serif",
     '@global p': {
       margin: 0,
@@ -62,15 +64,15 @@ const styles = {
   textTitle: {
     paddingBottom: 4,
     fontSize: 18,
-    color: '#333',
+    color: BLACK,
   },
   textType: {
     fontSize: 12,
     paddingBottom: 12,
-    color: '#7E7E7E',
+    color: GRAY,
   },
   textDescription: {
-    color: '#7E7E7E',
+    color: GRAY,
   },
   '@keyframes enter': {
     '0%': { opacity: 0},

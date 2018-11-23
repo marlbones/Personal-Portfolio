@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo.jpg'
 
+import { PRIMARY, HOVER, BLACK } from '../../style/constants';
+
 const BusinessCard = ({ classes }) => (
   <div className={classes.info}>
     <div className={classes.title}>
@@ -91,18 +93,18 @@ const styles = {
   },
   contactItem: {
     marginTop: 0,
-    color: '#333',
+    color: BLACK,
     fontFamily: "'Open Sans', sans-serif",
   },
   icons: {
     fontSize: 26,
   },
   link: {
-    color: '#377DC8',
+    color: PRIMARY,
     textDecoration: 'none',
     transition: '0.2s ease-in-out',
     '&:hover': {
-      color: '#459EFC'
+      color: HOVER
     },
   },
   logoContainer: {

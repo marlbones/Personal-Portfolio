@@ -3,6 +3,7 @@ import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 import BusinessCard from '../../components/BusinessCard'
 
+import { BACKGROUND } from '../../style/constants';
 
 const LandingPage = ({ classes }) => (
   <div className={classes.wrapper}>
@@ -15,7 +16,7 @@ const LandingPage = ({ classes }) => (
 const styles = {
   wrapper: {
     width: '100%',
-    backgroundColor: '#FBFCFC'
+    backgroundColor: BACKGROUND
     // backgroundColor: '#F0F2F9'
   },
   container: {

@@ -3,6 +3,8 @@ import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 import ProjectCard from '../../components/ProjectCard'
 
+import { BACKGROUND } from '../../style/constants';
+
 const ProjectsPage = ({ classes }) => (
   <div className={classes.wrapper}>
     <div className={classes.container}>
@@ -38,7 +40,7 @@ const styles = {
   wrapper: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#FBFCFC'
+    backgroundColor: BACKGROUND,
   },
   container: {
     display: 'flex',

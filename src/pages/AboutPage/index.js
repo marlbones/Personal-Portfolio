@@ -2,6 +2,8 @@ import React from 'react';
 import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 
+import { PRIMARY, HOVER, BLACK } from '../../style/constants';
+
 const AboutPage = ({ classes }) => (
   <div className={classes.wrapper}>
     <div className={classes.container}>
@@ -38,13 +40,14 @@ const styles = {
   sub: {
     fontSize: 16,
     fontFamily: "'Open Sans', sans-serif",
-    color: '#333',
+    color: BLACK,
     '@global a': {
-      color: '#377DC8',
+      color: PRIMARY,
       textDecoration: 'none',
+      transition: '0.2s ease-in-out',
       '&:hover': {
         textDecoration: 'none',
-        color: '#459EFC',
+        color: HOVER,
       },
     },
   },
