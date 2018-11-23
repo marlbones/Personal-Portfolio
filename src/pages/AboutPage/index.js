@@ -30,6 +30,7 @@ const styles = {
     minHeight: '100vh',
     maxWidth: '1200px',
     margin: 'auto',
+    animation: 'enter 1s',
   },
   info: {
     padding: 60,
@@ -46,6 +47,11 @@ const styles = {
         color: '#459EFC',
       },
     },
+  },
+  '@keyframes enter': {
+    '0%': { opacity: 0},
+    '15%': { opacity: 0},
+    '100%': { opacity: 1},
   },
 };
 

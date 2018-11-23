@@ -59,7 +59,7 @@ const styles = {
     '&:hover': {
       boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
     },
-    animation: 'enter 3s',
+    animation: 'enter 1s',
   },
   title: {
     flex: 1,
