@@ -14,7 +14,7 @@ const ProjectsPage = ({ classes }) => (
         imageAlt='Clinik Note Logo'
         projectTitle='Clinik Note'
         projectType='Professional Project'
-        projectDescription='Clinik Note is a cloud-based clinical notes app for iPad and desktop. It is specifically designed for physiotherapy practices and makes use of native functionaly.'
+        projectDescription='Clinik Note is a cloud-based clinical notes app for iPad and desktop. It is specifically designed for physiotherapy practices and makes use of native functionality.'
         link='http://cliniknote.com/'
       />
       <ProjectCard
