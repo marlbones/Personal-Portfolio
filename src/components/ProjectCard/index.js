@@ -83,6 +83,15 @@ const styles = {
     '15%': { opacity: 0},
     '100%': { opacity: 1},
   },
+  '@media (max-width: 512px)': {
+    wrapper: {
+      boxShadow: 'none',
+      borderBottom: [1, 'solid', 'lightgray'],
+      '&:hover': {
+        boxShadow: 'none',
+      },
+    },
+  },
 };
 
 export default compose(injectSheet(styles))(ProjectCard);

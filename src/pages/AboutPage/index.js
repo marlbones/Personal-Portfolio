@@ -76,6 +76,11 @@ const styles = {
     '15%': { opacity: 0},
     '100%': { opacity: 1},
   },
+  '@media (max-width: 512px)': {
+    info: {
+      padding: 36,
+    }
+  },
 };
 
 export default compose(injectSheet(styles))(AboutPage);
