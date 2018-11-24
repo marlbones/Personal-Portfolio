@@ -3,43 +3,49 @@ import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
-import Logo from './logo.jpg'
+// import Logo from './logo.jpg'
+import Logo from './mdcirclepurple.jpg'
 
 import { PRIMARY, HOVER, BLACK } from '../../style/constants';
 
 const BusinessCard = ({ classes }) => (
   <div className={classes.info}>
     <div className={classes.title}>
-      <Link className={classes.link} to={'/about'}>
         <h1 className={classes.heading}>Marlon Dimaano</h1>
-      </Link>
-       <Link className={classes.link} to={'/projects'}>
         <p className={classes.sub}>Web Developer</p>
-      </Link>
     </div>
     <div className={classes.bottomSection}>
       <div className={classes.contact}>
-        <p className={classes.contactItem}>
-          <span style={{fontWeight: 'bold'}}>Email:</span> mdimaanods@gmail.com
-        </p>
-        <p className={classes.contactItem}>
-          <span style={{fontWeight: 'bold'}}>Web:</span> https://marlbones.github.io/
-        </p>
-        <p className={classes.contactItem}>
-          <span style={{fontWeight: 'bold'}}>Location:</span> Accra, Ghana
-        </p>
+        <div className={classes.contactInfo}>
+          <p className={classes.contactItem}>
+            <span style={{fontWeight: 'bold'}}>Email:</span> mdimaanods@gmail.com
+          </p>
+          <p className={classes.contactItem}>
+            <span style={{fontWeight: 'bold'}}>Web:</span> https://marlbones.github.io/
+          </p>
+          <p className={classes.contactItem}>
+            <span style={{fontWeight: 'bold'}}>Location:</span> Accra, Ghana
+          </p>
+        </div>
         <div className={classes.icons}>
+          <Link className={classes.link} to={'/about'}>
+            <i className="fa fa-user link-styles"/>
+          </Link>
+          <Link className={classes.link} to={'/projects'}>
+            <i className="fa fa-laptop link-styles"/>
+          </Link>
+
           <a className={classes.link} href="https://github.com/marlbones">
-            <i className="fa fa-github link-styles" style={{paddingRight: 14}}></i>
+            <i className="fa fa-github link-styles"/>
           </a>
           <a className={classes.link} href="https://www.linkedin.com/in/marlon-dimaano-758014140/">
-            <i className="fa fa-linkedin link-styles" style={{paddingRight: 14}}></i>
+            <i className="fa fa-linkedin link-styles"/>
           </a>
           <a className={classes.link} href="https://twitter.com/marlbonez">
-            <i className="fa fa-twitter link-styles" style={{paddingRight: 14}}></i>
+            <i className="fa fa-twitter link-styles"/>
           </a>
           <a className={classes.link} href="mailto:mdimaanods@gmail.com">
-            <i className="fa fa-envelope link-styles"></i>
+            <i className="fa fa-envelope link-styles"/>
           </a>
         </div>
       </div>
@@ -74,11 +80,13 @@ const styles = {
     marginBottom: 4,
     marginTop: 34,
     fontFamily: "'Lato', sans-serif",
+    color: BLACK,
   },
   sub: {
     fontSize: 16,
     margin: 0,
     fontFamily: "'Open Sans', sans-serif",
+    color: BLACK,
   },
   bottomSection: {
     display: 'flex',
@@ -91,6 +99,11 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-end',
   },
+  contactInfo: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+  },
   contactItem: {
     marginTop: 0,
     color: BLACK,
@@ -98,9 +111,13 @@ const styles = {
   },
   icons: {
     fontSize: 26,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
   },
   link: {
     color: PRIMARY,
+    paddingRight: 16,
     textDecoration: 'none',
     transition: '0.2s ease-in-out',
     '&:hover': {
@@ -123,12 +140,24 @@ const styles = {
     '15%': { opacity: 0},
     '100%': { opacity: 1},
   },
+  '@media (max-width: 768px)': {
+    info: {
+      minWidth: '85%',
+    },
+    heading: {
+      fontSize: 24,
+    },
+  },
   '@media (max-width: 512px)': {
     info: {
+      paddingLeft: 0,
       boxShadow: 'none',
       '&:hover': {
         boxShadow: 'none',
       },
+    },
+    bottomSection: {
+      display: 'block',
     },
     logo: {
       height: 0,

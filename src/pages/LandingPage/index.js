@@ -17,7 +17,6 @@ const styles = {
   wrapper: {
     width: '100%',
     backgroundColor: BACKGROUND
-    // backgroundColor: '#F0F2F9'
   },
   container: {
     display: 'flex',

@@ -10,7 +10,7 @@ const ProjectCard = ({ classes, imageSrc, imageAlt, projectTitle, projectType, p
         <img className={classes.image} src={imageSrc} alt={imageAlt}/>
       </div>
       <div className={classes.text}>
-        <p className={classes.textTitle}><strong>{projectTitle}</strong></p>
+        <h3 className={classes.textTitle}><strong>{projectTitle}</strong></h3>
         <p className={classes.textType}>{projectType}</p>
         <p className={classes.textDescription}>{projectDescription}</p>
       </div>
@@ -45,19 +45,22 @@ const styles = {
   },
   image: {
     height: 250,
-    width: 300,
+    width: 320,
   },
   text: {
     flex: 1,
-    paddingLeft: 24,
-    paddingTop: 12,
+    padding: 24,
     maxWidth: 440,
     display: 'flex',
     flexDirection: 'column',
+    flexWrap: 'nowrap',
     fontSize: 16,
     color: BLACK,
     fontFamily: "'Open Sans', sans-serif",
     '@global p': {
+      margin: 0,
+    },
+    '@global h3': {
       margin: 0,
     },
   },
@@ -65,6 +68,7 @@ const styles = {
     paddingBottom: 4,
     fontSize: 18,
     color: BLACK,
+    fontFamily: "'Lato', sans-serif",
   },
   textType: {
     fontSize: 12,
