@@ -2,56 +2,52 @@ import React from 'react';
 import { compose } from 'recompose';
 import injectSheet from 'react-jss';
 
-import { BLACK, GRAY } from '../../style/constants';
+import { PRIMARY, HOVER, BLACK, GRAY } from '../../style/constants';
 
 const ProjectCard = ({ classes, imageSrc, imageAlt, projectTitle, projectType, projectDescription, link }) => (
-  <a className={classes.wrapper} href={link}>
-      <div className={classes.imageWrapper}>
-        <img className={classes.image} src={imageSrc} alt={imageAlt}/>
-      </div>
-      <div className={classes.text}>
-        <h3 className={classes.textTitle}><strong>{projectTitle}</strong></h3>
+  <div className={classes.wrapper}>
+      <div className={classes.content}>
+        <div className={classes.titleLinkGroup}>
+          <h3 className={classes.textTitle}><strong>{projectTitle}</strong></h3>
+          <a className={classes.link} href={link} target="_blank" rel="noopener noreferrer">
+            <i className="fa fa-link link-styles"/>
+          </a>
+        </div>
         <p className={classes.textType}>{projectType}</p>
         <p className={classes.textDescription}>{projectDescription}</p>
       </div>
-  </a>
+  </div>
 
 );
 
 const styles = {
-  wrapper: {
+  wrapper: ({imageSrc}) => ({
     textDecoration: 'none',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
     backgroundColor: 'white',
-    padding: 24,
+    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+    backgroundImage: `url(${imageSrc})`,
+    backgroundSize: '320px 250px',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    marginTop: 16,
     marginLeft: 16,
     marginRight: 16,
     marginBottom: 24,
-    maxWidth: 740,
-    minHeight: 250,
+    height: 250,
+    width: 320,
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
     transition: '0.3s ease-in-out',
-    cursor: 'pointer',
-    '&:hover': {
-      boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
-    },
-    animation: 'enter 1s',
-  },
-  imageWrapper: {
-    flex: 0.5,
-  },
-  image: {
-    height: 250,
-    width: 320,
-  },
-  text: {
+  }),
+  content: {
     flex: 1,
     padding: 24,
     maxWidth: 440,
     display: 'flex',
+    backgroundColor: 'white',
+    opacity: 0,
     flexDirection: 'column',
     flexWrap: 'nowrap',
     fontSize: 16,
@@ -63,12 +59,33 @@ const styles = {
     '@global h3': {
       margin: 0,
     },
+    transition: '0.3s ease-in-out',
+    '&:hover': {
+      opacity: 1,
+
+
+    },
+  },
+  titleLinkGroup: {
+    paddingBottom: 4,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   textTitle: {
-    paddingBottom: 4,
     fontSize: 18,
     color: BLACK,
     fontFamily: "'Lato', sans-serif",
+    paddingRight: 6,
+  },
+  link: {
+    fontSize: 18,
+    color: PRIMARY,
+    textDecoration: 'none',
+    transition: '0.2s ease-in-out',
+    '&:hover': {
+      color: HOVER
+    },
   },
   textType: {
     fontSize: 12,
@@ -78,19 +95,13 @@ const styles = {
   textDescription: {
     color: GRAY,
   },
-  '@keyframes enter': {
-    '0%': { opacity: 0},
-    '15%': { opacity: 0},
-    '100%': { opacity: 1},
-  },
   '@media (max-width: 512px)': {
-    wrapper: {
+    wrapper: () => ({
       boxShadow: 'none',
-      borderBottom: [1, 'solid', 'lightgray'],
       '&:hover': {
         boxShadow: 'none',
       },
-    },
+    }),
   },
 };
 
