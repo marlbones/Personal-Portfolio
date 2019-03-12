@@ -4,7 +4,7 @@ import injectSheet from 'react-jss';
 
 import { PRIMARY, HOVER, BLACK, GRAY } from '../../style/constants';
 
-const ProjectCard = ({ classes, imageSrc, imageAlt, projectTitle, projectType, projectDescription, link }) => (
+const ProjectCard = ({ classes, imageSrc, projectTitle, projectType, projectDescription, link }) => (
   <div className={classes.wrapper}>
       <div className={classes.content}>
         <div className={classes.titleLinkGroup}>
