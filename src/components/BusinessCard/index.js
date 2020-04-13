@@ -24,7 +24,7 @@ const BusinessCard = ({ classes }) => (
             <span style={{fontWeight: 'bold'}}>Web:</span> https://marlbones.github.io/
           </p>
           <p className={classes.contactItem}>
-            <span style={{fontWeight: 'bold'}}>Location:</span> Accra, Ghana
+            <span style={{fontWeight: 'bold'}}>Location:</span> Sydney, Australia
           </p>
         </div>
         <div className={classes.icons}>
